@@ -25,7 +25,7 @@ notifications:
       ds0631@gmail.com
 
 before_deploy:
-  - zip -r firstspringboot
+  - zip -r firstspringboot *
   - mkdir -p deploy
   - mv firstspringboot.zip deploy/firstspringboot.zip
 
