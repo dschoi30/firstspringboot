@@ -24,13 +24,12 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="3f0aec90-20ff-466f-8537-ee381dc3aaca">
-      <console name="firstspringboot" type="STANDARD" schema="mysql" session="Main" />
-      <console name="firstspringboot 1" type="STANDARD" schema="web_andrewchoi" session="Main"><![CDATA[create table posts (id bigint not null auto_increment, created_date datetime, modified_date datetime, author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB;
+    <connection id="33e779cd-a56a-41a5-bdb1-301e51641013">
+      <console name="firstspringboot" type="STANDARD" schema="mysql" session="Main"><![CDATA[create table posts (id bigint not null auto_increment, created_date datetime, modified_date datetime, author varchar(255), content TEXT not null, title varchar(500) not null, primary key (id)) engine=InnoDB;
 create table user (id bigint not null auto_increment, created_date datetime, modified_date datetime, email varchar(255) not null, name varchar(255) not null, picture varchar(255), role varchar(255) not null, primary key (id)) engine=InnoDB;
 
 CREATE TABLE SPRING_SESSION (
@@ -57,17 +56,26 @@ CREATE TABLE SPRING_SESSION_ATTRIBUTES (
 );
 COMMIT;
 
-select * from user;]]></console>
+select * from user;
+
+select @@time_zone, now();
+
+create TABLE test (
+id bigint(20) not null auto_increment,
+content varchar(255) default null,
+primary key (id)
+) engine=INNODB;
+
+insert into test(content) values ('테스트');
+
+select * from test;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="3f0aec90-20ff-466f-8537-ee381dc3aaca" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="3f0aec90-20ff-466f-8537-ee381dc3aaca" dataset="web_andrewchoi.user" active-filter-id="" />
+    <connection id="33e779cd-a56a-41a5-bdb1-301e51641013" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -98,7 +106,7 @@ select * from user;]]></console>
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="3f0aec90-20ff-466f-8537-ee381dc3aaca" active="true" signed="true">
+      <connection id="33e779cd-a56a-41a5-bdb1-301e51641013" active="true" signed="true">
         <database>
           <name value="firstspringboot" />
           <description value="jojoldu-webservice" />
@@ -109,7 +117,7 @@ select * from user;]]></console>
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
-          <host value="web-andrewchoi.cedjgu8ftmjo.ap-northeast-2.rds.amazonaws.com" />
+          <host value="firstspringboot.cedjgu8ftmjo.ap-northeast-2.rds.amazonaws.com" />
           <port value="3306" />
           <database value="mysql" />
           <type value="USER_PASSWORD" />
