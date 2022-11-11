@@ -58,7 +58,9 @@ COMMIT;
 
 select * from user;
 
-update user set role='USER';]]></console>
+update user set role='USER';
+
+select * from posts;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
