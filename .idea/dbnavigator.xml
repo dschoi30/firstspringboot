@@ -60,7 +60,9 @@ select * from user;
 
 update user set role='USER';
 
-select * from posts;]]></console>
+select * from posts;
+
+DELETE FROM user WHERE id='6';]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
